@@ -1,0 +1,13 @@
+project: bugz
+environments:
+  - name: dev
+    namespace: bhagya-dev
+    deployment:
+      method: rolling-upgrade
+    services: bhagya-spring.prsn.dev-prsn.io
+      - name: spring-app
+        external_url: 
+        port: 8080
+        ssl: "false"
+        replicas: 2
+  
